@@ -1,0 +1,51 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+#include<string>
+using namespace std;
+
+int main() {
+    int x,y,z;
+   
+
+    cout<< "Enter the maximum number of Banks"<<endl;
+    cin>>x;
+    cout<< "Enter number of particiants"<<endl;
+    cin>>y;
+    cout<< "Enter features" << endl;
+    cin>> z;
+     int arr[x][y][z];
+    
+    int i;
+    int j;
+    int k;
+    for(i=0;i<=x;i++) {
+        for(j=0;j<=y;j++) {
+            for(k=0;k<=z;k++) {
+                if(k==0) {
+                cout<<"Enter thy name"<<endl; 
+                cin>> arr[i][j][k];  
+                    break;
+                }
+                else if(k==1) {
+                    cout<<"Enter your roll number" << endl;
+                    cin>> arr[i][j][k];
+                    break;
+                }
+                
+                }
+               
+    
+    
+        
+        
+    }
+    return 0;
+}
+}
