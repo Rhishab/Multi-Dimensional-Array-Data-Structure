@@ -1,51 +1,66 @@
-/******************************************************************************
-
-                              Online C++ Compiler.
-               Code, Compile, Run and Debug C++ program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
-
 #include <iostream>
 #include<string>
 using namespace std;
 
 int main() {
-    int x,y,z;
-   
+  
+     int arr[2][2];
 
-    cout<< "Enter the maximum number of Banks"<<endl;
-    cin>>x;
-    cout<< "Enter number of particiants"<<endl;
-    cin>>y;
-    cout<< "Enter features" << endl;
-    cin>> z;
-     int arr[x][y][z];
+    int i,j,k;
+    //init Sequence 
+   
+        for(j=0;j<=1;j++) {
+            for(k=0;k<=1;k++) {
+                cout<< "Enter number  " <<endl;
+                cin>>arr[j][k];
+            }
+            cout<<" Bahenchod" << endl;
+        }
+        
+   // Orginal :
+   int a,b;
+    for(a=0;a<=1;a++) {
+        for(b=0;b<=1;b++){
+            cout<<arr[a][b];
+        }
+        cout<<endl;
+    }
+   
+   
+   
+   
+   
     
-    int i;
-    int j;
-    int k;
-    for(i=0;i<=x;i++) {
-        for(j=0;j<=y;j++) {
-            for(k=0;k<=z;k++) {
-                if(k==0) {
-                cout<<"Enter thy name"<<endl; 
-                cin>> arr[i][j][k];  
-                    break;
-                }
-                else if(k==1) {
-                    cout<<"Enter your roll number" << endl;
-                    cin>> arr[i][j][k];
-                    break;
-                }
+     // cout<< "Enter the maximum number of Banks"<<endl;
+    // cin>>x;
+    // cout<< "Enter number of particiants"<<endl;
+    // cin>>y;
+    // cout<< "Enter features" << endl;
+    // cin>> z;
+    
+    
+    // for(i=0;i<=x;i++) {
+    //     for(j=0;j<=y;j++) {
+    //         for(k=0;k<=z;k++) {
+    //             if(k==0) {
+    //             cout<<"Enter thy name"<<endl; 
+    //             cin>> arr[i][j][k];  
+    //                 break;
+    //             }
+    //             else if(k==1) {
+    //                 cout<<"Enter your roll number" << endl;
+    //                 cin>> arr[i][j][k];
+    //                 break;
+    //             }
                 
-                }
+    //             }
                
     
     
         
         
-    }
+    // }
+    // }
     return 0;
 }
-}
+
