@@ -4,63 +4,47 @@ using namespace std;
 
 int main() {
   
-     int arr[2][2];
+     int arr[3][3][3];
+     
 
-    int i,j,k;
-    //init Sequence 
+    int i,j,k,l;
+    
    
-        for(j=0;j<=1;j++) {
-            for(k=0;k<=1;k++) {
+        for(j=0;j<3;j++) {
+            for(k=0;k<3;k++) {
+                for(l=0;l<3;l++){
                 cout<< "Enter number  " <<endl;
-                cin>>arr[j][k];
+                cin>>arr[j][k][l];
+                }
+                cout<< "Next column" <<endl;
             }
-            cout<<" Bahenchod" << endl;
+            cout<<"Net Row"<<endl;
+
         }
         
    // Orginal :
-   int a,b;
-    for(a=0;a<=1;a++) {
-        for(b=0;b<=1;b++){
-            cout<<arr[a][b];
+   int a,b,c;
+    for(a=0;a<3;a++) {
+        for(b=0;b<=3;b++){
+        	cout<< "[";
+            for(c=0;c<3;c++) {
+            cout<<arr[a][b][c]<<" ";
+            
+            }
+            cout<< "]" <<endl;
         }
         cout<<endl;
     }
+    int g;
+    
+    cout<<" Hello ";
+    cin>>g;
    
    
    
    
    
     
-     // cout<< "Enter the maximum number of Banks"<<endl;
-    // cin>>x;
-    // cout<< "Enter number of particiants"<<endl;
-    // cin>>y;
-    // cout<< "Enter features" << endl;
-    // cin>> z;
-    
-    
-    // for(i=0;i<=x;i++) {
-    //     for(j=0;j<=y;j++) {
-    //         for(k=0;k<=z;k++) {
-    //             if(k==0) {
-    //             cout<<"Enter thy name"<<endl; 
-    //             cin>> arr[i][j][k];  
-    //                 break;
-    //             }
-    //             else if(k==1) {
-    //                 cout<<"Enter your roll number" << endl;
-    //                 cin>> arr[i][j][k];
-    //                 break;
-    //             }
-                
-    //             }
-               
-    
-    
-        
-        
-    // }
-    // }
+
     return 0;
 }
-
