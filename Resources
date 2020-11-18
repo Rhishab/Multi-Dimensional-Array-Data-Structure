@@ -1,2 +1,88 @@
 Display Fucntion example : https://www.geeksforgeeks.org/multidimensional-arrays-c-cpp/
 Inset Example : https://www.programiz.com/cpp-programming/multidimensional-arrays
+
+//code for now 
+#include <string>
+#include <iostream>
+using namespace std;
+
+class Data {
+private:
+    int Arr[3][2][2];
+
+public:
+
+    Data() {
+        int j, l, k;
+        int z = 1;
+        for (j = 0;j <= 3;j++) {
+            for (k = 0;k <= 2;k++) {
+                for (l = 0;l <= 2;l++) {
+                    Arr[j][k][l] = z;
+                    z = z + 1;
+                }
+            }
+        } // end of declaration 
+    }
+
+    void display() {
+        int a, b, c;
+        for (a = 0;a < 3;a++) {
+            for (b = 0;b <= 2;b++) {
+                cout << "[";
+                for (c = 0;c <= 2;c++) {
+                    cout << Arr[a][b][c] << " ";
+
+                }
+                cout << "]" << endl;
+            }
+            cout << endl;
+        }
+
+    } // end of display
+
+    void Search() {
+        int j, k, l;
+        int find;
+        int a, b, c;
+        cout << "Which number do you want to find?" << endl;
+        cin >> find;
+        for (j = 0;j <= 3;j++) {
+            for (k = 0;k <= 2;k++) {
+                for (l = 0;l <= 2;l++) {
+                    if (Arr[j][k][l] == find) {
+                        cout << "We found it" << endl;
+                        cout << "coordinate : " << "[" << a, b, c;
+                        cout << "]" << endl;
+
+                        break;
+                    }
+                    
+                }
+            }
+        }
+
+
+    }
+
+};
+
+int main()
+{ 
+    Data D1;
+    D1.display();
+    int ans;
+    cout << "Do you wanna search something  O or 1 ?" << endl;
+    cin >> ans;
+    if (ans == 1) {
+        D1.Search();
+    }
+    else {
+        cout << "Never mind" << endl;
+    }
+
+    return 0;
+
+    
+}
+
