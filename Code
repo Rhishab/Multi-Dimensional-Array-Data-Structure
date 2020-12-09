@@ -2,44 +2,145 @@
 #include<string>
 using namespace std;
 
-int main() {
-
-    int arr[3][2][3];// [Main Array num][Sub Array in each Main][element storage ]
-
-
+class ArrayData {
+private:
+    int  arr[3][2][3];  // [Main Array num][Sub Array in each Main][element storage ]
+public:
     int i, j, k, l;
 
+    ArrayData() {
+        for (j = 0;j < 3;j++) {
+            for (k = 0;k < 3;k++) {
+                for (l = 0;l < 3;l++) {
+                    cout << "Enter number  " << endl;
+                    cin >> arr[j][k][l];
 
-    for (j = 0;j < 3;j++) {
-        for (k = 0;k < 3;k++) {
-            for (l = 0;l < 3;l++) {
-                cout << "Enter number  " << endl;
-                cin >> arr[j][k][l];
-               
+                }
+                cout << "Next column" << endl;
             }
-            cout << "Next column" << endl;
+            cout << "Net Row" << endl;
+
         }
-        cout << "Net Row" << endl;
+
 
     }
 
-    // Orginal :
-    int a, b, c;
-    for (a = 0;a < 3;a++) {
-        for (b = 0;b < 3;b++) {
-            cout << "[";
-            for (c = 0;c < 3;c++) {
-                cout << arr[a][b][c] << " ";
+    void display() {
+        int a, b, c;
+        for (a = 0;a < 3;a++) {
+            for (b = 0;b < 3;b++) {
+                cout << "[";
+                for (c = 0;c < 3;c++) {
+                    cout << arr[a][b][c] << " ";
 
+                }
+                cout << "]" << endl;
             }
-            cout << "]" << endl;
+            cout << endl;
         }
-        cout << endl;
+
     }
-    int g;
 
-    cout << " Hello ";
-    cin >> g;
+    void search(int Snum) {
+        int a, b, c;
+        for (a = 0;a < 3;a++) {
+            for (b = 0;b < 3;b++) {
+                
+                for (c = 0;c < 3;c++) {
+                    if (arr[a][b][c] == Snum) {
+                        cout << "it is in position of Index " << a << " " << b << " " << c << " --> " << arr[a][b][c] << endl;
+                    }
+
+                }
+                
+            }
+            cout << endl;
+        }
+
+
+    }
+
+    void max() {
+        int a, b, c;
+        int max = 0;
+        for (a = 0;a < 3;a++) {
+            for (b = 0;b < 3;b++) {
+              
+                for (c = 0;c < 3;c++) {
+                    if (arr[a][b][c] > max) {
+                        max = arr[a][b][c];
+                    }
+
+                }
+                
+            }
+            cout << endl;
+        }
+        cout << "Maximum Value is " << max << endl;
+
+    }
+
+    void min() {
+        int a, b, c;
+        int min = 0;
+        for (a = 0;a < 3;a++) {
+            for (b = 0;b < 3;b++) {
+                
+                for (c = 0;c < 3;c++) {
+                    if (arr[a][b][c] < min) {
+                        min = arr[a][b][c];
+                    }
+
+                }
+                
+            }
+            cout << endl;
+
+            cout << "Minimum Value is " << min << endl;
+
+        }
+
+
+    }
+};
+
+    int main() {
+        int input;
+        ArrayData A;
+        int Uinp;
+        cout << "Hello User" << endl;
+        cout << "Choose betweeb the following options" << endl;
+        cout << "1) Display" << endl;
+        cout << "2) Search" << endl;
+        cout << "3) Max" << endl;
+        cout << "4) Min" << endl;
+        cin >> Uinp;
+
+
+        Select(Uinp) {
+
+        }
+        
+
+
+
+    
+
+
+        
+        //  A.display();
+      //cout << "Enter Number to search" << endl;
+      //cin >> input;
+      //A.search(input);
+      //A.max();
+      //A.min();
+
+     
+
+        int g;
+
+        cout << " Hello ";
+        cin >> g;
 
 
 
@@ -47,5 +148,5 @@ int main() {
 
 
 
-    return 0;
-}
+        return 0;
+    }
