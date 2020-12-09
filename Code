@@ -107,33 +107,13 @@ public:
     int main() {
         int input;
         ArrayData A;
-        int Uinp;
-        cout << "Hello User" << endl;
-        cout << "Choose betweeb the following options" << endl;
-        cout << "1) Display" << endl;
-        cout << "2) Search" << endl;
-        cout << "3) Max" << endl;
-        cout << "4) Min" << endl;
-        cin >> Uinp;
-
-
-        Select(Uinp) {
-
-        }
-        
-
-
-
-    
-
-
-        
-        //  A.display();
-      //cout << "Enter Number to search" << endl;
-      //cin >> input;
-      //A.search(input);
-      //A.max();
-      //A.min();
+             
+        A.display();
+      cout << "Enter Number to search" << endl;
+      cin >> input;
+      A.search(input);
+      A.max();
+      A.min();
 
      
 
